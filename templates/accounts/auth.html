@@ -1,0 +1,13 @@
+{% extends "base_template.html" %}
+
+
+{% block content %}
+    <div class="col-md-12 col-lg-12 mx-auto">
+        <h1> {{ title }} </h1>
+        {% if confirmation %}
+
+        <p> {{ confirmation }} </p>
+        {% endif %}
+        {% include "Comps/forms.html" with form=form btn_label=btn_label %}
+    </div>
+{% endblock content %}
